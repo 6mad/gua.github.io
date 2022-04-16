@@ -3,10 +3,14 @@ const { param2Obj } = require('./utils')
 
 const user = require('./user')
 const table = require('./table')
+const search = require('./remote-search')
+const article = require('./article')
 
 const mocks = [
   ...user,
-  ...table
+  ...table,
+  ...search,
+  ...article
 ]
 
 // for front mock
@@ -54,4 +58,3 @@ module.exports = {
   mocks,
   mockXHR
 }
-
