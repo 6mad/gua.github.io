@@ -36,88 +36,88 @@ export const constantRoutes = [{
   hidden: true
 },
 
-{
-  path: '/404',
-  component: () => import('@/views/404'),
-  hidden: true
-},
+  {
+    path: '/404',
+    component: () => import('@/views/404'),
+    hidden: true
+  },
 
-{
-  path: '/',
-  component: Layout,
-  redirect: '/dashboard',
-  children: [{
-    path: 'dashboard',
-    name: 'Dashboard',
-    component: () => import('@/views/dashboard/index'),
-    meta: {
-      title: '控制面板',
-      icon: 'dashboard'
-    }
-  }]
-},
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/dashboard',
+    children: [{
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/dashboard/index'),
+      meta: {
+        title: '控制面板',
+        icon: 'dashboard'
+      }
+    }]
+  },
 
-{
-  path: '/managechats',
-  component: Layout,
-  children: [{
-    path: 'index',
-    name: 'AdminChats',
-    component: () => import('@/views/managechats/index'),
-    meta: {
-      title: 'Chats管理',
-      icon: 'table'
+  {
+    path: '/managechats',
+    component: Layout,
+    children: [{
+      path: 'index',
+      name: 'AdminChats',
+      component: () => import('@/views/managechats/index'),
+      meta: {
+        title: 'Chats管理',
+        icon: 'table'
+      }
     }
-  }
-  ]
-},
+    ]
+  },
 
-{
-  path: '/manageuser',
-  component: Layout,
-  children: [{
-    path: 'index',
-    name: 'ManageUser',
-    component: () => import('@/views/manageuser/index'),
-    meta: {
-      title: '用户管理',
-      icon: 'user'
-    }
-  }]
-},
+  {
+    path: '/manageuser',
+    component: Layout,
+    children: [{
+      path: 'index',
+      name: 'ManageUser',
+      component: () => import('@/views/manageuser/index'),
+      meta: {
+        title: '用户管理',
+        icon: 'user'
+      }
+    }]
+  },
 
-{
-  path: '/notice',
-  component: Layout,
-  children: [{
-    path: 'index',
-    name: 'Notice',
-    component: () => import('@/views/notice/index'),
-    meta: {
-      title: '发布公告',
-      icon: 'edit'
-    }
-  }]
-},
+  {
+    path: '/notice',
+    component: Layout,
+    children: [{
+      path: 'index',
+      name: 'Notice',
+      component: () => import('@/views/notice/index'),
+      meta: {
+        title: '发布公告',
+        icon: 'edit'
+      }
+    }]
+  },
 
-{
-  path: 'goto',
-  component: Layout,
-  children: [{
-    path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-    meta: {
-      title: '前往应用首页',
-      icon: 'link'
-    }
-  }]
-},
+  {
+    path: 'goto',
+    component: Layout,
+    children: [{
+      path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
+      meta: {
+        title: '前往应用首页',
+        icon: 'link'
+      }
+    }]
+  },
 
 // 404 page must be placed at the end !!!
-{
-  path: '*',
-  redirect: '/404',
-  hidden: true
-}
+  {
+    path: '*',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 
 const createRouter = () => new Router({
